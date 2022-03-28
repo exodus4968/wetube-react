@@ -5,7 +5,7 @@ export default function Watch() {
   return (
     <>
       <Helmet>
-        <title>Wetube</title>
+        <title>Wetube | Watch</title>
       </Helmet>
       <h1>Watch</h1>
       <Outlet />

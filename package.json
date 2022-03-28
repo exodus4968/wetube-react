@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon src/server.ts",
+    "server": "nodemon src/init.ts",
     "front": "cd frontend && npm start",
-    "start": "concurrently \"npm run server\" \"npm run front\""
+    "start": "concurrently \"npm run server\" \"npm run front\"",
+    "dbstart": "sudo service mongodb start",
+    "dbstop": "sudo service mongodb stop",
+    "dbstatus": "sudo service mongodb status"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "mongoose": "^6.2.8",
     "morgan": "^1.10.0"
   },
   "devDependencies": {

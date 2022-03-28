@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/partials/Footer";
-import Video from "./components/Video";
 import Home from "./screens/Home";
+import Upload from "./screens/Upload";
 import Watch from "./screens/Watch";
 
 export default function Router() {
@@ -9,9 +9,8 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/videos" element={<Watch />}>
-          <Route path=":id" element={<Video />} />
-        </Route>
+        <Route path="/videos" element={<Watch />} />
+        <Route path="upload" element={<Upload />} />
       </Routes>
       <Footer />
     </BrowserRouter>

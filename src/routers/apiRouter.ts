@@ -1,6 +1,7 @@
 import express from "express";
-import { trending } from "../controllers/videoController";
+import { trending, upload } from "../controllers/controllers";
 
 export const apiRouter = express.Router();
 
-apiRouter.route("/videos/:id(\\d+)").get(trending);
+apiRouter.route("/trending").get(trending);
+apiRouter.route("/upload").post(upload);
